@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TCAExample2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView(
+              store: Store(initialState: Search.State()) {
+                Search()
+                  ._printChanges()
+              }
+            )
         }
     }
 }

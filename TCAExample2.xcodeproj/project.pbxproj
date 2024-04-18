@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3B2F3CD82BD1433A00B8DCEE /* TCAExample2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3CD72BD1433A00B8DCEE /* TCAExample2App.swift */; };
-		3B2F3CDA2BD1433A00B8DCEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3CD92BD1433A00B8DCEE /* ContentView.swift */; };
 		3B2F3CDC2BD1433B00B8DCEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F3CDB2BD1433B00B8DCEE /* Assets.xcassets */; };
 		3B2F3CDF2BD1433B00B8DCEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F3CDE2BD1433B00B8DCEE /* Preview Assets.xcassets */; };
+		3B2F3CE72BD1439800B8DCEE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2F3CE62BD1439800B8DCEE /* ComposableArchitecture */; };
+		3B2F3CE92BD143E300B8DCEE /* SearchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3CE82BD143E300B8DCEE /* SearchReducer.swift */; };
+		3B2F3CEB2BD1440E00B8DCEE /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3CEA2BD1440E00B8DCEE /* WeatherClient.swift */; };
+		3B2F3CED2BD146DE00B8DCEE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3CEC2BD146DE00B8DCEE /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B2F3CD42BD1433A00B8DCEE /* TCAExample2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAExample2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2F3CD72BD1433A00B8DCEE /* TCAExample2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAExample2App.swift; sourceTree = "<group>"; };
-		3B2F3CD92BD1433A00B8DCEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3B2F3CDB2BD1433B00B8DCEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B2F3CDE2BD1433B00B8DCEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B2F3CE82BD143E300B8DCEE /* SearchReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReducer.swift; sourceTree = "<group>"; };
+		3B2F3CEA2BD1440E00B8DCEE /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		3B2F3CEC2BD146DE00B8DCEE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2F3CE72BD1439800B8DCEE /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +57,9 @@
 		3B2F3CD62BD1433A00B8DCEE /* TCAExample2 */ = {
 			isa = PBXGroup;
 			children = (
+				3B2F3CF12BD1477700B8DCEE /* Clients */,
+				3B2F3CEF2BD1474D00B8DCEE /* Features */,
 				3B2F3CD72BD1433A00B8DCEE /* TCAExample2App.swift */,
-				3B2F3CD92BD1433A00B8DCEE /* ContentView.swift */,
 				3B2F3CDB2BD1433B00B8DCEE /* Assets.xcassets */,
 				3B2F3CDD2BD1433B00B8DCEE /* Preview Content */,
 			);
@@ -65,6 +72,31 @@
 				3B2F3CDE2BD1433B00B8DCEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B2F3CEF2BD1474D00B8DCEE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3B2F3CF02BD1476100B8DCEE /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3B2F3CF02BD1476100B8DCEE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3B2F3CE82BD143E300B8DCEE /* SearchReducer.swift */,
+				3B2F3CEC2BD146DE00B8DCEE /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3B2F3CF12BD1477700B8DCEE /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				3B2F3CEA2BD1440E00B8DCEE /* WeatherClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = TCAExample2;
+			packageProductDependencies = (
+				3B2F3CE62BD1439800B8DCEE /* ComposableArchitecture */,
+			);
 			productName = TCAExample2;
 			productReference = 3B2F3CD42BD1433A00B8DCEE /* TCAExample2.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 3B2F3CCB2BD1433A00B8DCEE;
+			packageReferences = (
+				3B2F3CE52BD1439800B8DCEE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 3B2F3CD52BD1433A00B8DCEE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B2F3CDA2BD1433A00B8DCEE /* ContentView.swift in Sources */,
+				3B2F3CED2BD146DE00B8DCEE /* SearchView.swift in Sources */,
+				3B2F3CE92BD143E300B8DCEE /* SearchReducer.swift in Sources */,
 				3B2F3CD82BD1433A00B8DCEE /* TCAExample2App.swift in Sources */,
+				3B2F3CEB2BD1440E00B8DCEE /* WeatherClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B2F3CE52BD1439800B8DCEE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B2F3CE62BD1439800B8DCEE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2F3CE52BD1439800B8DCEE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B2F3CCC2BD1433A00B8DCEE /* Project object */;
 }
